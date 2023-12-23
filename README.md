@@ -1,79 +1,182 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+<div align="center">
 
-# Getting Started
+<a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/boilerplate_react_native?style=plastic)</a>
+![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/boilerplate_react_native?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/boilerplate_react_native?color=yellow&style=plastic)
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+</div>
 
-## Step 1: Start the Metro Server
+<h1 align="center">Boilerplate Complete and updated with React Native, Typescript, Tests and more</h1>
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+<br />
 
-To start Metro, run the following command from the _root_ of your React Native project:
+# :memo: About the Project
+
+This application is a boilerplate for complex and large systems, especially those that need to scale with security and code quality.
+
+We sought to achieve 3 pillars: readability, reusability, and refactorability.
+
+In the construction of the UI, the Atomic Design structure was chosen, organizing the global components into atoms, molecules, organisms and templates.
+
+In addition to being constantly updated, this project was configured in the smallest details to serve as a basis for professional projects that require standardized and easy-to-maintain code architecture and design.
+
+<br />
+
+---
+
+# :pushpin: Contents
+
+- [Technologies](#globe_with_meridians-technologies)
+- [Features](#triangular_flag_on_post-features)
+- [Prerequisites](#white_check_mark-prerequisites)
+- [How to install and run the project](#question-how-to-install-and-run-the-project)
+   - [Clone Repository](#clone-repository)
+   - [Install Dependencies](#install-dependencies)
+   - [Start Development Environment](#start-development-environment)
+   - [Generate Production Build](#generate-production-build)
+   - [Start Production Environment](#start-production-environment)
+   - [Run Tests](#run-tests)
+   - [Run Tests in Watch Mode](#run-tests-in-watch-mode)
+   - [Run Lints](#run-lints)
+   - [Format code with prettier](#format-code-with-prettier)
+   - [Check for Available Updates for Dependencies](#check-for-available-updates-for-dependencies)
+- [Important Considerations](#rotating_light-important-considerations)
+- [Author](#technologist-author)
+
+<br />
+
+---
+
+# :globe_with_meridians: Technologies
+
+⚛ React Native
+
+🔥 TypeScript
+
+💅 StyleSheets
+
+🚩 Lints: Husky, ESlint, Commitlint, Lint-Staged, Prettier and Typecheck
+
+✅ Vitest
+
+🐙 React Testing Library
+
+<br />
+
+---
+
+# :triangular_flag_on_post: Features
+
+- [x] Atomic Design;
+
+- [x] 100% coverage;
+
+<br />
+
+---
+
+# :white_check_mark: Prerequisites
+
+- node (latest version lts).
+
+- yarn (latest version lts).
+
+<br />
+
+---
+
+# :question: How to install and run the project
+
+## Clone Repository
 
 ```bash
-# using npm
-npm start
+git clone https://github.com/everton-dgn/boilerplate_react_native.git
+```
 
-# OR using Yarn
+## Install Dependencies
+
+```bash
+yarn
+```
+
+## Start Development Environment
+
+```bash
+yarn dev
+```
+
+Available in http://localhost:3000
+
+## Generate Production Build
+
+```bash
+yarn build
+```
+
+## Start Production Environment
+
+```bash
 yarn start
 ```
 
-## Step 2: Start your Application
+Available in http://localhost:3000
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
+## Run Tests
 
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+yarn test
 ```
 
-### For iOS
+## Run Tests in Watch Mode
 
 ```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+yarn test:w
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+Available in http://localhost:6006
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+## Run Lints
 
-## Step 3: Modifying your App
+```bash
+yarn lint
+```
 
-Now that you have successfully run the app, let's modify it.
+```bash
+yarn typecheck
+```
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+```bash
+yarn check:format
+```
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+## Format code with prettier
 
-## Congratulations! :tada:
+```bash
+yarn format
+```
 
-You've successfully run and modified your React Native App. :partying_face:
+## Check for Available Updates for Dependencies
 
-### Now what?
+```bash
+yarn check:update
+```
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+<br />
 
-# Troubleshooting
+---
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+# :rotating_light: Important Considerations
 
-# Learn More
+- The husky is configured to not allow commit if there are any lint and typescript errors. The push can only be done if all tests and builds (of the project and the storybook) pass.
 
-To learn more about React Native, take a look at the following resources:
+- Due to husky's build check settings, to push with git, the development server must be stopped first or an error will occur in the `git push` command.
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+---
+
+# :technologist: Author
+
+By [Éverton Toffanetto](https://programadordesucesso.com).
+
+:link: LinkedIn: https://www.linkedin.com/in/everton-toffanetto
+
+:link: YouTube: https://youtube.com/@toffanettodev
