@@ -6,7 +6,7 @@
   "author": "Éverton Toffanetto",
   "description": "This application is a boilerplate for complex and large systems, especially those that need to scale with security and code quality.",
   "repository": "https://github.com/everton-dgn/boilerplate_react_native",
-  "main": "src/App.tsx",
+  "main": "index.js",
   "scripts": {
     "dev": "react-native start",
     "android": "react-native run-android",
